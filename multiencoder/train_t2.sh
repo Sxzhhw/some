@@ -25,14 +25,13 @@ do
     --multiencoder_max_num_chunks 16 \
     --multiencoder_stride \
     --predict_with_generate \
-    --eval_strategy epoch \  # 替换 evaluation_strategy
+    --eval_strategy epoch \  # 修正参数名称
     --num_train_epochs 10 \
     --save_strategy epoch \
     --logging_strategy epoch \
     --load_best_model_at_end \
     --compute_rouge_for_train True \
-    --fp16 \  # 开启混合精度训练
-    --device gpu \  # 指定设备为 GPU
+    --fp16 \
     --seed $RUN
   echo "Run $RUN completed."
 done
